@@ -1,0 +1,42 @@
+name: Import file
+# Downloads a file from a URL, checks its SHA-256, and commits it unchanged.
+# Run from Actions > Import file > Run workflow.
+on:
+  workflow_dispatch:
+    inputs:
+      url:
+        description: Source URL
+        required: true
+      path:
+        description: Destination path in this repository
+        required: true
+      sha256:
+        description: Expected SHA-256 of the file
+        required: true
+permissions:
+  contents: write
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download and verify
+        env:
+          SRC: ${{ inputs.url }}
+          DEST: ${{ inputs.path }}
+          SUM: ${{ inputs.sha256 }}
+        run: |
+          mkdir -p "$(dirname "$DEST")"
+          curl -fsSL "$SRC" -o "$DEST"
+          echo "$SUM  $DEST" | sha256sum -c -
+          wc -c "$DEST"
+      - name: Commit
+        env:
+          DEST: ${{ inputs.path }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add -- "$DEST"
+          git diff --cached --quiet && { echo "No change"; exit 0; }
+          git commit -m "Import $DEST"
+          git push

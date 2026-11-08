@@ -1,0 +1,53 @@
+name: Import page code
+# Reads a live GHL page, takes its one Custom Code block, checks its SHA-256,
+# and commits it unchanged. Run from Actions > Import page code > Run workflow.
+on:
+  workflow_dispatch:
+    inputs:
+      url:
+        description: Live page URL
+        required: true
+      path:
+        description: Destination path in this repository
+        required: true
+      sha256:
+        description: Expected SHA-256 of the code block
+        required: true
+permissions:
+  contents: write
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Extract and verify
+        env:
+          SRC: ${{ inputs.url }}
+          DEST: ${{ inputs.path }}
+          SUM: ${{ inputs.sha256 }}
+        run: |
+          python3 - <<'PY'
+          import os, re, json, hashlib, urllib.request
+          src, dest, want = os.environ["SRC"], os.environ["DEST"], os.environ["SUM"]
+          req = urllib.request.Request(src, headers={"User-Agent": "Mozilla/5.0"})
+          html = urllib.request.urlopen(req).read().decode("utf-8")
+          data = re.search(r'<script[^>]*id="__NUXT_DATA__"[^>]*>(.*?)</script>', html, re.S).group(1)
+          blocks = [v for v in json.loads(data) if isinstance(v, str) and len(v) >= 2000 and ("<style" in v or "<script" in v)]
+          assert len(blocks) == 1, f"expected 1 code block, found {len(blocks)}"
+          body = blocks[0].encode("utf-8")
+          got = hashlib.sha256(body).hexdigest()
+          assert got == want, f"SHA-256 mismatch: {got}"
+          os.makedirs(os.path.dirname(dest) or ".", exist_ok=True)
+          open(dest, "wb").write(body)
+          print(dest, len(body), got)
+          PY
+      - name: Commit
+        env:
+          DEST: ${{ inputs.path }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add -- "$DEST"
+          git diff --cached --quiet && { echo "No change"; exit 0; }
+          git commit -m "Import $DEST"
+          git push

@@ -1,4 +1,4 @@
-<!-- Belties Demo page v1.1 (2026-11-06: phone concierge section added, (434) 313-8183; v1.0 web chat only). Molini Demo page template v2.1. Paste into one GHL Custom Code element; Custom CSS box empty. -->
+<!-- Belties Demo page v1.2 (2026-11-09: virtual concierge wording, no she or her, email chooser, widow guard). v1.1 (2026-11-06: phone concierge section added, (434) 313-8183; v1.0 web chat only). Molini Demo page template v2.1. Paste into one GHL Custom Code element; Custom CSS box empty. -->
 <meta name="robots" content="noindex, nofollow">
 <script>(function(){try{var h=document.head;document.querySelectorAll('link[rel~="icon"],link[rel="shortcut icon"],link[rel="apple-touch-icon"]').forEach(function(l){l.parentNode.removeChild(l)});[['icon','32x32','https://images.squarespace-cdn.com/content/v1/62c5d27028ec3b2fbd499df4/82003629-d869-4627-92ef-9383c96c9958/favicon.ico?format=100w'],['apple-touch-icon','180x180','https://images.squarespace-cdn.com/content/v1/62c5d27028ec3b2fbd499df4/a3cdfb1e-dc82-4944-84ec-119860b54e14/Belties_Bell+2.png?format=300w']].forEach(function(a){var l=document.createElement('link');l.rel=a[0];l.sizes=a[1];l.href=a[2];h.appendChild(l)})}catch(e){}})();</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..500,100;1,9..144,300..500,100&family=Poppins:wght@300;400;500&display=swap">
@@ -83,9 +83,9 @@
 <div>
 <p class="label">Meet Belle</p>
 <h1>A warm welcome for every <i>question</i></h1>
-<p class="sub">A digital concierge that answers your guests on the phone and online at any hour, in the voice of your Moo Crew, and hands every important moment to your&nbsp;team.</p>
+<p class="sub">A virtual concierge that answers your guests on the phone and online at any hour, in the voice of your Moo Crew, and hands every important moment to your&nbsp;team.</p>
 <a class="begin" href="#mdb-call">Call Belle</a>
-<p class="tel-hint" style="margin-top:16px">or <a href="#mdb-try">try her online</a></p>
+<p class="tel-hint" style="margin-top:16px">or <a href="#mdb-try">try Belle online</a></p>
 </div>
 <figure><img src="https://images.squarespace-cdn.com/content/v1/62c5d27028ec3b2fbd499df4/801e4ba3-4398-4bc1-bc7b-c6055e0b3c44/BeltiesSoftOpenJune2025JLooney-0202.jpg?format=1500w" alt="The white Belties farmhouse cafe with its wraparound porch and rocking chairs, the red barn behind it"><figcaption>Photo: Belties</figcaption></figure>
 </div>
@@ -95,14 +95,14 @@
 <div>
 <p class="label">Call the concierge</p>
 <h2>Hear Belle on the&nbsp;phone</h2>
-<p>Belle answers so your Moo Crew can stay with the guests in front of them. She answers from what Belties publishes, takes down what a caller needs, reads it back, and passes it to your team so they call back with every detail in hand. Call from any phone.</p>
+<p>Belle answers so your Moo Crew can stay with the guests in front of them. Every answer comes from what Belties publishes. Belle takes down what a caller needs, reads it back, and passes it to your team so they call back with every detail in hand. Call from any phone.</p>
 <a class="tel" href="tel:+14343138183">(434) 313-8183</a>
 <p class="tel-hint">On your phone, tap the number to call.</p>
 </div>
 <div>
 <span class="label" style="display:block;margin-bottom:10px">Ask what a guest would</span>
 <ol class="try">
-<li><span class="n">01</span><span>&#8220;Are you open the Friday after Thanksgiving?&#8221;<small>Listen for how she handles hours that aren&#8217;t posted yet</small></span></li>
+<li><span class="n">01</span><span>&#8220;Are you open the Friday after Thanksgiving?&#8221;<small>Listen for how Belle handles hours that aren&#8217;t posted yet</small></span></li>
 <li><span class="n">02</span><span>&#8220;I&#8217;d like to have my mom&#8217;s birthday brunch at Belties in March.&#8221;<small>Listen for the read-back</small></span></li>
 <li><span class="n">03</span><span>&#8220;Can I speak to someone?&#8221;</span></li>
 </ol>
@@ -110,7 +110,7 @@
 <li>This is a private demo line. Calls may be recorded.</li>
 <li>Any request you leave goes to Molini Studio, not to your team.</li>
 <li>&#8220;Speak to someone&#8221; rings Brad&#8217;s phone, not the cafe.</li>
-<li>Belle never books or confirms anything. She takes the request, and your team confirms.</li>
+<li>Belle never books or confirms anything. Your team confirms every request.</li>
 </ul>
 </div>
 </div>
@@ -144,7 +144,7 @@
 </ul>
 </div>
 </div>
-<div class="chat" aria-label="Belle, the Belties digital concierge">
+<div class="chat" aria-label="Belle, the Belties virtual concierge">
 <div id="vf-chat"></div>
 </div>
 </div>
@@ -221,4 +221,54 @@ if (start) { start.click(); setTimeout(send, 3000); } else { send(); }
 });
 });
 </script>
+  <div class="mml" id="mml" role="dialog" aria-modal="true" aria-labelledby="mml-h" hidden>
+    <div class="mml-card">
+      <button type="button" class="mml-x" aria-label="Close">&times;</button>
+      <p class="mml-h" id="mml-h">Write to Brad</p>
+      <p class="mml-a">brad@molinistudio.com</p>
+      <a class="mml-o" data-k="gmail" target="_blank" rel="noopener">Open in Gmail</a>
+      <a class="mml-o" data-k="outlook" target="_blank" rel="noopener">Open in Outlook</a>
+      <a class="mml-o" data-k="app">Use my email app</a>
+      <button type="button" class="mml-o" data-k="copy">Copy the address</button>
+      <a class="mml-o" href="tel:+14342600024">Call or text (434) 260-0024</a>
+    </div>
+  </div>
+  <style>
+    .mdb .mml{position:fixed;inset:0;z-index:2147483000;display:flex;align-items:center;justify-content:center;padding:16px;background:rgba(20,18,17,.55)}
+    .mdb .mml[hidden]{display:none}
+    .mdb .mml-card{position:relative;width:100%;max-width:360px;background:#fff;color:#1C1C1C;border-radius:6px;padding:28px 24px 20px;box-shadow:0 18px 48px rgba(0,0,0,.28)}
+    .mdb .mml-h{font-size:21px;font-weight:500;margin:0 0 4px}
+    .mdb .mml-a{font-size:15px;color:#4A4644;margin:0 0 18px}
+    .mdb .mml-o{display:block;width:100%;text-align:left;font:inherit;font-size:16px;color:#1C1C1C;background:#fff;border:1px solid #CFC9C2;border-radius:4px;padding:13px 14px;margin:0 0 8px;cursor:pointer;text-decoration:none;min-height:44px}
+    .mdb .mml-o:hover{background:#F4F1EC}
+    .mdb .mml-o:focus-visible,.mdb .mml-x:focus-visible{outline:2px solid #1C1C1C;outline-offset:2px}
+    .mdb .mml-x{position:absolute;top:8px;right:8px;width:44px;height:44px;border:0;background:none;font-size:28px;line-height:1;color:#1C1C1C;cursor:pointer}
+  </style>
+  <script type="text/javascript">
+  (function(){
+    var root=document.querySelector('.mdb');if(!root)return;
+    /* Email chooser (Molini standard, Nov. 8, 2026): never a bare mailto */
+    var dlg=root.querySelector('#mml'),last=null,ADDR='brad@molinistudio.com';
+    function open(subj){last=document.activeElement;var s=encodeURIComponent(subj||'');
+      dlg.querySelector('[data-k=gmail]').href='https://mail.google.com/mail/?view=cm&fs=1&to='+ADDR+(s?'&su='+s:'');
+      dlg.querySelector('[data-k=outlook]').href='https://outlook.office.com/mail/deeplink/compose?to='+ADDR+(s?'&subject='+s:'');
+      dlg.querySelector('[data-k=app]').href='mailto:'+ADDR+(s?'?subject='+s:'');
+      dlg.hidden=false;dlg.querySelector('.mml-o').focus();}
+    function close(){dlg.hidden=true;if(last&&last.focus)last.focus();}
+    root.querySelectorAll('a[href^="mailto:"]').forEach(function(a){if(dlg.contains(a))return;a.setAttribute('aria-haspopup','dialog');
+      a.addEventListener('click',function(e){e.preventDefault();var m=a.getAttribute('href').match(/subject=([^&]*)/);open(m?decodeURIComponent(m[1]):(document.title.split('|')[0].trim()+' concierge preview'));});});
+    dlg.querySelector('.mml-x').addEventListener('click',close);
+    dlg.addEventListener('click',function(e){if(e.target===dlg)close();});
+    document.addEventListener('keydown',function(e){if(!dlg.hidden&&e.key==='Escape')close();});
+    dlg.querySelectorAll('.mml-o').forEach(function(o){o.addEventListener('click',function(){if(o.getAttribute('data-k')==='copy'){var done=function(){o.textContent='Address copied';setTimeout(function(){o.textContent='Copy the address'},2000)};
+      if(navigator.clipboard)navigator.clipboard.writeText(ADDR).then(done,done);else done();return;}setTimeout(close,300);});});
+    /* Molini widow guard v1.1, extended to span, small, dd and dt */
+    var NB=' ';
+    root.querySelectorAll('p,h1,h2,h3,h4,figcaption,blockquote,li,span,small,dd,dt').forEach(function(el){if(el.closest('#vf-chat,.mml'))return;var w=document.createTreeWalker(el,NodeFilter.SHOW_TEXT),ns=[],n;while((n=w.nextNode()))ns.push(n);
+      for(var i=ns.length-1;i>=0;i--){var v=ns[i].nodeValue;if(!v.trim())continue;var m=v.match(/^([\s\S]*\S)[ ]+(\S+\s*)$/);if(m){ns[i].nodeValue=m[1]+NB+m[2];return}var p=ns[i-1];if(p&&/ +$/.test(p.nodeValue))p.nodeValue=p.nodeValue.replace(/ +$/,NB);return}});
+    /* direct text runs that sit before a child element (a quote followed by a small note) keep their last two words together too */
+    root.querySelectorAll('span,li,p').forEach(function(el){if(el.closest('#vf-chat,.mml'))return;for(var c=el.firstChild;c;c=c.nextSibling){if(c.nodeType===3&&c.nextSibling&&c.nextSibling.nodeType===1){var m2=c.nodeValue.match(/^([\s\S]*\S)[ ]+(\S+\s*)$/);if(m2)c.nodeValue=m2[1]+NB+m2[2];}}});
+    root.querySelectorAll('a,button').forEach(function(el){if(el.children.length||el.closest('.mml'))return;var t=el.textContent.trim();if(!t)return;if(t.split(/\s+/).length<=4){el.textContent=t.replace(/ +/g,NB)}else{el.textContent=t.replace(/^(\S+) +/,'$1'+NB).replace(/ +(\S+)$/,NB+'$1')}});
+  })();
+  </script>
 </section>

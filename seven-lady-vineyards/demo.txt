@@ -158,7 +158,7 @@
         <h2 id="call-title">Hear Vera on the&nbsp;phone.</h2>
         <p>When the tasting room is full or the team is with a guest, the concierge picks up. It answers from what 7 Lady publishes, takes down what a caller needs, reads it back, and passes it to your&nbsp;team.</p>
         <p class="phone-number"><a href="tel:+18042801639">+1 804 280 1639</a></p>
-        <p class="label">Main line on the 7 Lady listings: (804)&nbsp;784-6051</p>
+        <p class="label">Main line on the 7 Lady website: (804)&nbsp;784-6051, ext.&nbsp;4</p>
       </div>
       <div>
         <p class="label">Ask what a caller&nbsp;would</p>
@@ -269,7 +269,7 @@
         <p class="label">Why&nbsp;Molini</p>
         <hr class="gold-rule">
         <h2 id="why-title">Virginia wine runs in my&nbsp;family.</h2>
-        <p>My relative, Antonio Molini, came to Virginia in 1773 with Philip Mazzei to plant vines at Colle, next door to Monticello. Jefferson mentions him by name in his letters. I named my studio for&nbsp;him.</p>
+        <p>My relative, Antonio Molini, came to Virginia in 1773 with Philip Mazzei to plant vines at Colle, two miles from Monticello. Jefferson names him in a letter. I named my studio for&nbsp;him.</p>
       </div>
       <div>
         <p>I worked in a Charlottesville tasting room and saw how much of a great team’s day goes to answering the same questions. I want Virginia’s wine estates to have the same tools the largest companies have, so the people you already employ have more time for the guests in front of&nbsp;them.</p>
